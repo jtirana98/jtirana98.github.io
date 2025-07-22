@@ -1,6 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <style>
+uh {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+lii {
+  float: left;
+}
+
+lii a {
+  display: block;
+  color: teal;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+lii a:hover {
+  background-color: #111111;
+}
+</style>
 <title>Joana-Tirana-CV</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -114,8 +139,23 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
     <!-- Right Column -->
     <div class="w3-twothird">
 
+       <br>
+          <p>
+            <uh>
+            <lii><span style="color: teal"> <a href="#education">Education</a></span> </lii>
+            <lii><span style="color: teal"> <a href="#experience">Experience</a></span> </lii>
+            <lii><span style="color: teal"> <a href="#publications">List of Publications</a></span> </lii>
+            <lii><span style="color: teal"> <a href="#services">Services</a></span> </lii>
+            <lii><span style="color: teal"> <a href="#teaching">Teaching</a></span> </lii>
+            <lii><span style="color: teal"> <a href="#advising">Advising & Metoring</a></span> </lii>
+            <lii><span style="color: teal"> <a href="#awards">Awards</a></span> </lii>
+
+            
+          </uh>
+          </p>
+
       <div class="w3-container w3-card w3-white">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
+        <h2 class="w3-text-grey w3-padding-16" id="education"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
         <div class="w3-container">
           <img src="ucd-logo.png" width="90" height="90" style="float:right">
           <h5 class="w3-opacity"><b>Phd in Computer Science</b></h5>
@@ -145,7 +185,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
       </div>
     
       <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Experience</h2>
+        <h2 class="w3-text-grey w3-padding-16" id="experience" ><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Experience</h2>
         <div class="w3-container">
           <img src="telefonica_logo.jpeg" width="60" height="60" style="float:right">
           <h5 class="w3-opacity"><b>Research Intern at Telefónica Innovación Diginal</b><b><span style="color: teal">, Barcelona Spain</span></b>
@@ -187,7 +227,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
 
        <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-book fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>List of publications</h2>
+        <h2 class="w3-text-grey w3-padding-16" id="publications"><i class="fa fa-book fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>List of publications</h2>
         <div class="w3-container">
           <h5 class="w3-opacity"><b>Conferences/Workshops</b></h5>
           <p><span style="color: teal">[C1]:</span> <u>Tirana, J.</u>, Pappas, C., Chatzopoulos, D., Lalis, S., & Vavalis, M. (2022, July). The role of compute nodes in privacy-aware decentralized ai. In Proceedings of the 6th International Workshop on Embedded and Mobile Deep Learning (pp. 19-24).
@@ -214,15 +254,79 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
 
       <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-book fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Research & Coding Project</h2>
+        <h2 class="w3-text-grey w3-padding-16" id="coding"><i class="fa fa-bug fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Research & Coding Project</h2>
         <div class="w3-container">
-          <h5 class="w3-opacity"><b>Multi-hop Split Learning</b></h5>
+          <h5 class="w3-opacity"><b>TBA</b></h5>
          
         </div>
        
       </div>
 
-      
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16" id="services"><i class="fa fa-edit fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Services</h2>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>
+            <ul>
+            <li> Artifact reviewer: EurSys'23, CoNEXT'23</li>
+            <li> Main papers TPC: ACM WebConf'25, ACM IMC'25 (shadow)</li> 
+            <li> Journal reviews: IEEE TNET/TMC/TGCN </li> 
+            <li> Workshops TPC: EuroMLSys'25</li> 
+          </ul>
+          </b></h5>
+         
+        </div>
+       
+      </div>
+
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16" id="teaching"><i class="fa fa-flask fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Teaching</h2>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>
+
+            <ul>
+            <li> Web Development Teaching Assistant UCD -- Ac. year: 2022-2023</li>
+            <li> Cloud Computing Teaching Assistant UCD -- Ac. years: 2022-2023, 2023-2024</li> 
+            <li> Distinguished Teaching Assistant -- UCD (Academic year 2022-2023)</li> 
+            <li> Programming I and Programming II Course Laboratory Assistant UTH -- Ac. year: 2020-2021</li> 
+            <li> Data Structures Course Laboratory Assistant UTH -- Ac. year: 2019-2020</li>
+          </ul>
+          </b></h5>
+         
+        </div>
+       
+      </div>
+
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16" id="advising"><i class="fa fa-child fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Advicing & Mentoring</h2>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>
+            <ul>
+              <li><a href="https://www.linkedin.com/in/pranav-narula/">Pranav Narula</a>: Intern Master Student with Vista Milk & UCD, co-supervised with Dr. Dimitris Chatzopoulos. (Ac. year: 2023-2024)</li>
+              <li>Stella Keany: Final Year Project Bachelor Student at UCD, co-supervised with Dr. Dimitris Chatzopoulos. (Ac. year: 2023-2024)</li>
+            </ul>
+          </b></h5>
+         
+        </div>
+       
+      </div>
+
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16" id="awards"><i class="fa fa-mortar-board fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Awards</h2>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>
+            <ul>
+            <li> Outstanding Poster at the research poster event -- UCD  (Jan. 2024)</li>
+            <li> ACM Student Travel Grant for SenSys '23 -- ACM SIGs  (Nov. 2023)</li> 
+            <li> Distinguished Teaching Assistant -- UCD (Academic year 2022-2023)</li> 
+            <li> UCD PhD scholarship Jan. 2022 - Dec. 2025</li> 
+            <li> Learn Advanced C++ Programming -- Udemy (Oct. 2021)</li>
+          </ul>
+
+          </b></h5>
+         
+        </div>
+       
+      </div>
 
     <!-- End Right Column -->
     </div>
