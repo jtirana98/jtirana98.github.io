@@ -51,6 +51,29 @@ lii a:hover {
   color: black;
 }
 
+.collapsible {
+  background-color: #ffffff;
+  color: #169294;
+  cursor: pointer;
+  padding: 0px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 18px;
+}
+
+.active, .collapsible:hover {
+  background-color: #dad3d396;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
 /* Main content */
 .main {
   margin-top: 30px; /* Add a top margin to avoid content overlay */
@@ -136,11 +159,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
     <!-- End Left Column -->
     </div>
 
-    <!-- Right Column -->
-    <div class="w3-twothird">
-
-       <br>
-          <p>
+    <p>
             <uh>
               <div class="navbar">
                 <a href="#education">Education</a>
@@ -164,6 +183,12 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
             
           </uh>
           </p>
+
+    <!-- Right Column -->
+    <div class="w3-twothird">
+
+       <br>
+          
 
       <div class="w3-container w3-card w3-white">
         <h2 class="w3-text-grey w3-padding-16" id="education"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
@@ -235,11 +260,14 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
           <br>
         </div>
       </div>
-
-
+      </div> <!-- HERE IS THE DIV FOR THE HALF WINDOW -->
+      <div class="w3-container w3-card w3-white w3-margin-bottom"></div>
+      <!-- Remove the w3-content and w3-row-padding wrappers above this line to make the content full width -->
        <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <!-- <hr> -->
         <h2 class="w3-text-grey w3-padding-16" id="publications"><i class="fa fa-book fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>List of publications</h2>
         <div class="w3-container">
+          
           <h5 class="w3-opacity"><b>Conferences/Workshops</b></h5>
           <p><span style="color: teal">[C3]:</span> <u>Tirana, J.</u> Lalis, S., & Chatzopoulos, D. (2025, March). Estimating the Training Time in Single-and Multi-Hop Split Federated Learning. In Proceedings of the 8th International Workshop on Edge Systems, Analytics and Networking (pp. 37-42).</p>
                     <p><span style="color: teal">[C2]:</span> <u>Tirana, J.</u>, Tsigkari, D., Iosifidis, G., & Chatzopoulos, D. (2024, May). Workflow optimization for parallel split learning. In IEEE INFOCOM 2024-IEEE Conference on Computer Communications (pp. 1331-1340). IEEE.</p>
@@ -274,42 +302,75 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
         <h2 class="w3-text-grey w3-padding-16" id="coding"><i class="fa fa-bug fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Research & Coding Project</h2>
         <div class="w3-container">
           <h5 class="w3-opacity"><b>
-            <div class="w3-container">
-              <h5 class="w3-text-teal"><b>Multihop Pipelined Federated-Split Learning Framework</b> -- <a href="https://github.com/jtirana98/MultiHop-Federeated-Split-Learning">Code</a> (13 stars GitHub)</h5>
-              <p> In this work, we propose SplitPipe, a Machine Learning as a Service (MLaaS) modular and extensible framework for collaborative and distributed training. SplitPipe processes high-level tasks (e.g., with the model’s description that will be trained) and orchestrates the training process based on a novel Split Learning (SL) protocol. Additionally, SplitPipe supports multihop SL-based training that enhances data privacy and relaxes memory demands.
-              </p>
-              <p>Tools: C++ and LibTorch, devices: Raspberry Pi and Jetson</p>
-              <hr>
             </div>
+            <!-- <div class="w3-container"> -->
+              <!-- <h5 class="w3-text-teal"><b>Multihop Pipelined Federated-Split Learning Framework</b> -- <a href="https://github.com/jtirana98/MultiHop-Federeated-Split-Learning">Code</a> (13 stars GitHub)</h5> -->
 
-            <div class="w3-container">
-              <h5 class="w3-text-teal"><b>Joint Optimization of client mapping and training task scheduling</b> -- <a href="https://github.com/jtirana98/SFL-workflow-optimization">Code</a> (19 stars GitHub)</h5>
-              <p> In this work, we consider a parallel SL system with multiple helper nodes. Specifically, we focus on orchestrating the workflow of this system, which is critical in highly heterogeneous systems. In particular, we formulate the joint problem of client-helper assignments and scheduling decisions to minimize the training makespan. We propose a solution method based on the decomposition of the problem by leveraging its inherent symmetry.
-              </p>
-              <p>Tools: Python, Gurobi, cvxpy</p>
+              <button type="button" class="collapsible">Tackling Catastrophic forgetting in Split Federated Learning</b></button>
+                <div class="content">
+                  <p style="font-size: 15px;">Studying the impact of data heterogeneity in Split Learning. 
+                    Specifically, we conduct systematic analysis with Deep Neural Networks (ResNet, VGG, MobileNet) using various data-sets.
+                    As a result, we indetified the existence of catastrophic forgetting (CF) in the training.
+                    Finally, we proposed a new ML solution for tackling CF caused by non-IID data. 
+                  </p>
+                </div>
+              <p style="margin-left: 20px;"><span style="color: teal;">&#8226;</span> Tools: PyTorch</p>
+              <!-- <p style="margin-left: 20px;"><span style="color: teal;">&#8226;</span> <a href="https://github.com/jtirana98/MultiHop-Federeated-Split-Learning">Code</a> (13 stars GitHub)</p> -->
               <hr>
-            </div>
+            
+
+
+
+              <button type="button" class="collapsible">Multihop Pipelined Federated-Split Learning Framework</b></button>
+                <div class="content">
+                  <p style="font-size: 15px;" >In this work, we propose SplitPipe, a Machine Learning as a Service (MLaaS) modular and extensible framework for collaborative and distributed training. SplitPipe processes high-level tasks (e.g., with the model’s description that will be trained) and orchestrates the training process based on a novel Split Learning (SL) protocol. Additionally, SplitPipe supports multihop SL-based training that enhances data privacy and relaxes memory demands.</p>
+                </div>
+              <p style="margin-left: 20px;"><span style="color: teal;">&#8226;</span> Tools: C++ and LibTorch, devices: Raspberry Pi and Jetson</p>
+              <p style="margin-left: 20px;"> <i class="fa fa-link fa-fw w3-margin-right w3-large w3-text-teal"></i> <a  href="https://github.com/jtirana98/MultiHop-Federeated-Split-Learning">Code</a> (13 stars GitHub)</p>
+              <hr>
+            
+
+            
+              <!-- <h5 class="w3-text-teal"><b>Joint Optimization of client mapping and training task scheduling</b> -- <a href="https://github.com/jtirana98/SFL-workflow-optimization">Code</a> (19 stars GitHub)</h5> -->
+               <button type="button" class="collapsible">Joint Optimization of client mapping and training task scheduling</b> </button>
+                <div class="content">
+              <p> In this work, we consider a parallel SL system with multiple helper nodes. Specifically, we focus on orchestrating the workflow of this system, which is critical in highly heterogeneous systems. In particular, we formulate the joint problem of client-helper assignments and scheduling decisions to minimize the training makespan. We propose a solution method based on the decomposition of the problem by leveraging its inherent symmetry.
+                </p>
+                </div>
+                <p style="margin-left: 20px;"><span style="color: teal;">&#8226;</span> Tools: Python, Gurobi, cvxpy</p>
+              <p style="margin-left: 20px;"><i class="fa fa-link fa-fw w3-margin-right w3-large w3-text-teal"></i><a href="https://github.com/jtirana98/SFL-workflow-optimization">Code</a> (20 stars GitHub)</p>
+              <hr>
+            
 
              <div class="w3-container">
-              <h5 class="w3-text-teal"><b>Support for Parallel Drone-based Task Execution at Multiple Edge Points</b> -- <a href="https://github.com/jtirana98/uth_thesis">Code</a> (5 stars GitHub)</h5>
+             </div>
+              <!-- <h5 class="w3-text-teal"><b>Support for Parallel Drone-based Task Execution at Multiple Edge Points</b> -- <a href="https://github.com/jtirana98/uth_thesis">Code</a> (5 stars GitHub)</h5> -->
+              <button type="button" class="collapsible">Support for Parallel Drone-based Task Execution at Multiple Edge Points</b></b> </button>
+                <div class="content">
               <p> Developed a distributed system consisting of a server in the cloud and multiple servers on edge nodes. Each edge-node is located near a group of drones, with direct access to them. Edge-nodes can process the generated data in parallel and independently of each other. The system offers users a shell interface through which one can initiate tasks to specific edge nodes and afterwards combine the results. The communication between the server and the edges is done without any user intervention. Also, created an estimation model using metrics that were extracted from experimental testing.
               </p>
-              <p>Tools: Python, Docker, ardupilot</p>
+                </div>
+              <p style="margin-left: 20px;"><span style="color: teal;">&#8226;</span> Tools: Python, Docker, ardupilot</p>
+              <p style="margin-left: 20px;"><i class="fa fa-link fa-fw w3-margin-right w3-large w3-text-teal"></i><a href="https://github.com/jtirana98/uth_thesis">Code</a> (5 stars GitHub)</p>
               <hr>
-            </div>
+            <!-- </div> -->
 
             <div class="w3-container">
-              <h5 class="w3-text-teal"><b>Distributed Systems</b></h5>
+              </div>
+              <!-- <h5 class="w3-text-teal"><b>Distributed Systems</b></h5> -->
+              <button type="button" class="collapsible">Distributed Systems</b> </button>
+                <div class="content">
               <p> Build multiple distributed computing systems during Bachelor's and Master's studies. Some indicative examples are: Distributed computing environment with transparent migration and load balancing, distributed system for Uniform Reliable multicast communication with synchronous view.
               </p>
-              <p>Tools: Java, Unix libraries for networking</p>
+              </div>
+              <p style="margin-left: 20px;"><span style="color: teal;">&#8226;</span> Tools: Java, Unix libraries for networking</p>
               <hr>
             </div>
-
+            
 
           </b></h5>
          
-        </div>
+        
        
       </div>
 
@@ -400,6 +461,23 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
   <i class="fa fa-linkedin w3-hover-opacity"></i>
   <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
 </footer> -->
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
 
 </body>
 </html>
